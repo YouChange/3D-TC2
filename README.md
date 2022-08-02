@@ -42,7 +42,7 @@ Please feed your poisoned dataset to any kinds of 3D object detectors and get pr
 Our detection results after running OpenPCDet(https://github.com/open-mmlab/OpenPCDet.git) can be downloaded here: link
 
 #### 5. Object-Motion prediction
-Use pretrained MotionNet(model.pth) to detect anomalies based on historical scenes:
+Use pretrained MotionNet(https://github.com/pxiangwu/MotionNet) to detect anomalies based on historical scenes:
 ```
 python TC2.py --data ./data/nuscenes/mini/ --version v1.0-mini --modelpath model.pth --net MotionNet --savepath log
 ```
