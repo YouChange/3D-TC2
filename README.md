@@ -39,7 +39,7 @@ Our detection results after running OpenPCDet(https://github.com/open-mmlab/Open
 #### 5. Object-Motion prediction
 Use pretrained MotionNet(model.pth) to detect anomalies based on historical scenes:
 ```
-python plots.py --data ./data/nuscenes/mini/ --version v1.0-mini --modelpath model.pth --net MotionNet --savepath log
+python TC2.py --data ./data/nuscenes/mini/ --version v1.0-mini --modelpath model.pth --net MotionNet --savepath log
 ```
 
 
