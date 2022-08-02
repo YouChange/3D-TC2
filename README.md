@@ -1,8 +1,8 @@
 # 3D-TC2
 This is the official implementation of 3D-TC2(Temporal Consistency Checks to Detect LiDAR Spoofing Attacks on Autonomous Vehicle Perception)
 
-This is the official implementation of 3D-TC2(Temporal Consistency Checks to Detect LiDAR Spoofing Attacks on Autonomous Vehicle Perception)
 Paper Link: https://dl.acm.org/doi/pdf/10.1145/3469261.3469406
+Presentation Link: https://youtube.com/watch?v=vkYfP7Cr-1I&feature=share
 
 ## Requirements
 - CUDA >= 9.0
@@ -18,7 +18,7 @@ export PYTHONPATH=/home/cy19/homedir/MotionNet/nuscenes-devkit/python-sdk:$PYTHO
 ```
 
 2. Dataset
-Download Nuscenes dataset from https://www.nuscenes.org/ For example, to download the nuScenes mini split:
+Download Nuscenes dataset from `https://www.nuscenes.org/`. For example, to download the nuScenes mini split:
 `wget https://www.nuscenes.org/data/v1.0-mini.tgz `
 
 Dataset folder: ./data/nuscenes/
