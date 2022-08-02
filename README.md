@@ -1,6 +1,11 @@
 # 3D-TC2
 This is the official implementation of 3D-TC2(Temporal Consistency Checks to Detect LiDAR Spoofing Attacks on Autonomous Vehicle Perception)
 
+![image](https://user-images.githubusercontent.com/16199843/182342087-c2c67ed6-6ef7-4144-ab9a-3e91aadce45d.png)
+
+Targeting object spoofing attacks, 3D-TC2 can provide more than 98% attack detection rate with a recall of 91% for detecting spoofed Vehicle
+(Car) objects, and is able to achieve real-time detection at 41Hz.
+
 Paper Link: https://dl.acm.org/doi/pdf/10.1145/3469261.3469406
 
 Presentation Link: https://youtube.com/watch?v=vkYfP7Cr-1I&feature=share
@@ -32,7 +37,7 @@ In our paper, we assume historical scenes are not poisoned and performed single-
 You can also customize your own poisoned LiDAR dataset via other attack methods(e.g., consecutive attacks) to perform stress tests on 3D-TC2.
 
 #### 4. Object detection
-Please feed your poisoned dataset to any kind of 3D object detectors and get predictions.
+Please feed your poisoned dataset to any kinds of 3D object detectors and get predictions.
 
 Our detection results after running OpenPCDet(https://github.com/open-mmlab/OpenPCDet.git) can be downloaded here: link
 
