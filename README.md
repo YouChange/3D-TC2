@@ -29,7 +29,7 @@ Download Nuscenes dataset from https://www.nuscenes.org/. For example, to downlo
 ```
 wget https://www.nuscenes.org/data/v1.0-mini.tgz
 ```
-Dataset folder: ./data/nuscenes/
+Dataset folder: `./data/nuscenes/`
 
 #### 3. Attack the dataset for object detection
 In our paper, we assume historical scenes are not poisoned and performed single-frame injection attack. 
@@ -39,7 +39,7 @@ You can also customize your own poisoned LiDAR dataset via other attack methods(
 #### 4. Object detection
 Please feed your poisoned dataset to any kinds of 3D object detectors and get predictions.
 
-Our detection results after running OpenPCDet(https://github.com/open-mmlab/OpenPCDet.git) can be found in './detection' folder
+Our detection results after running OpenPCDet(https://github.com/open-mmlab/OpenPCDet.git) can be found in `./detection` folder
 
 #### 5. Object-Motion prediction
 Use pretrained MotionNet(https://github.com/pxiangwu/MotionNet) to detect anomalies based on historical scenes:
