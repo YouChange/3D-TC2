@@ -39,7 +39,7 @@ You can also customize your own poisoned LiDAR dataset via other attack methods(
 #### 4. Object detection
 Please feed your poisoned dataset to any kinds of 3D object detectors and get predictions.
 
-Our detection results after running OpenPCDet(https://github.com/open-mmlab/OpenPCDet.git) can be downloaded here: link
+Our detection results after running OpenPCDet(https://github.com/open-mmlab/OpenPCDet.git) can be found in './detection' folder
 
 #### 5. Object-Motion prediction
 Use pretrained MotionNet(https://github.com/pxiangwu/MotionNet) to detect anomalies based on historical scenes:
