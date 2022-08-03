@@ -1,5 +1,5 @@
 # 3D-TC2
-This is the official implementation of 3D-TC2(Temporal Consistency Checks to Detect LiDAR Spoofing Attacks on Autonomous Vehicle Perception)
+This is the official implementation of 3D-TC2(Temporal Consistency Checks to Detect LiDAR Spoofing Attacks on Autonomous Vehicle Perception).
 
 ![image](https://user-images.githubusercontent.com/16199843/182342087-c2c67ed6-6ef7-4144-ab9a-3e91aadce45d.png)
 
@@ -19,34 +19,34 @@ Presentation Link: https://youtube.com/watch?v=vkYfP7Cr-1I&feature=share
 ## Usage
 #### 1. Add path to the root folder. For example:
 ```
-export PYTHONPATH=/home/cy19/homedir/MotionNet:$PYTHONPATH
-export PYTHONPATH=/home/cy19/homedir/MotionNet/nuscenes-devkit/python-sdk:$PYTHONPATH
+export PYTHONPATH=/your/home/dir/MotionNet:$PYTHONPATH
+export PYTHONPATH=/your/home/dir/MotionNet/nuscenes-devkit/python-sdk:$PYTHONPATH
 ```
 
 #### 2. Dataset
 
-Download Nuscenes dataset from https://www.nuscenes.org/. For example, to download the nuScenes mini split:
+Download Nuscenes dataset from https://www.nuscenes.org/. For example, to download Nuscenes mini split:
 ```
 wget https://www.nuscenes.org/data/v1.0-mini.tgz
 ```
-Dataset folder: `./data/nuscenes/`
+Download to the dataset folder: `./data/nuscenes/`.
 
 #### 3. Attack the dataset for object detection
-In our paper, we assume historical scenes are not poisoned and performed single-frame injection attack. 
+In our paper, we assume historical scenes are not poisoned and performed single-frame injection attacks. 
 
 You can also customize your own poisoned LiDAR dataset via other attack methods(e.g., consecutive attacks) to perform stress tests on 3D-TC2.
 
 #### 4. Object detection
 Please feed your poisoned dataset to any kinds of 3D object detectors and get predictions.
 
-Our detection results after running OpenPCDet(https://github.com/open-mmlab/OpenPCDet.git) can be found in `./detection` folder
+Our detection results after running OpenPCDet(https://github.com/open-mmlab/OpenPCDet.git) can be found in `./detection` folder.
 
 #### 5. Object-Motion prediction
 Use pretrained MotionNet to detect anomalies based on historical scenes:
 ```
 python TC2.py --data ./data/nuscenes/mini/ --version v1.0-mini --modelpath model.pth --net MotionNet --savepath log
 ```
-Note: If you find `model.pth` is corrupted, please download one from MotionNet official website: https://github.com/pxiangwu/MotionNet
+Note: If you find `model.pth` is corrupted, please download one from MotionNet official website: https://github.com/pxiangwu/MotionNet .
 
 ## Reference
 ```
