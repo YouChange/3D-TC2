@@ -32,7 +32,7 @@ wget https://www.nuscenes.org/data/v1.0-mini.tgz
 Download to the dataset folder: `./data/nuscenes/`.
 
 #### 3. Attack the dataset
-Attack LiDAR scenes in `./data/nuscenes/mini/sweeps/` and customize your own poisoned LiDAR dataset via any data injection attack method.
+Attack LiDAR scenes in `./data/nuscenes/mini/sweeps/` and customize your own poisoned LiDAR dataset via any data injection attack methods.
 
 In our paper, we performed **single-frame injection attack** and assume historical scenes are not poisoned. To do that, you can randomly pick some scenes from the **temporally attacked dataset** here: Link. Then replace corresponding benign LiDAR scenes in `./data/nuscenes/mini/sweeps/` . 
 
@@ -57,7 +57,7 @@ These are some potential directions you might want to further explore:
 -Temporal attacks
 If you want to perform stress tests on the motion predictor, you can also poison historical scenes to perform consecutive/temporal attacks. To do that, you can select more scenes from  the **temporally attacked dataset** to ensure historical scenes are poisoned to influence motion predictions for the current scene. 
 
--Other motion predictors. Other pretrained motion predictors such as FlowNet3D(https://github.com/xingyul/flownet3d), PointFlowNet(https://github.com/aseembehl/pointflownet) and HPLFlowNet(https://github.com/laoreja/HPLFlowNet) are also good targets.
+-Other motion predictors. Other pretrained motion predictors such as FlowNet3D(https://github.com/xingyul/flownet3d), PointFlowNet(https://github.com/aseembehl/pointflownet) and HPLFlowNet(https://github.com/laoreja/HPLFlowNet) are also good replacements for MotionNet.
 
 
 ## Reference
