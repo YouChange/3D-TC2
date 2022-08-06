@@ -54,10 +54,9 @@ If you find `model.pth` corrupted, please download one from MotionNet official w
 #### 6. Further exploration
 These are some potential directions you might want to further explore:
 
-- Temporal attacks
-If you want to perform stress tests on the motion predictor, you can also poison historical scenes to perform consecutive/temporal attacks. To do that, you can select more scenes from the **temporally attacked dataset** to ensure historical scenes are poisoned to influence motion predictions for the current scene. 
+- **Temporal attacks**. If you want to perform stress tests on the motion predictor, you can also poison historical scenes to perform consecutive/temporal attacks. To do that, you can select more scenes from the **temporally attacked dataset** to ensure historical scenes are poisoned to influence motion predictions for the current scene. 
 
-- Other motion predictors. Other pretrained motion predictors such as FlowNet3D(https://github.com/xingyul/flownet3d), PointFlowNet(https://github.com/aseembehl/pointflownet) and HPLFlowNet(https://github.com/laoreja/HPLFlowNet) are also good replacements for MotionNet.
+- **Other motion predictors**. Other pretrained motion predictors such as FlowNet3D(https://github.com/xingyul/flownet3d), PointFlowNet(https://github.com/aseembehl/pointflownet) and HPLFlowNet(https://github.com/laoreja/HPLFlowNet) are also good replacements for MotionNet.
 
 
 ## Reference
