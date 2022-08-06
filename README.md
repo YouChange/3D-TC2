@@ -32,29 +32,31 @@ wget https://www.nuscenes.org/data/v1.0-mini.tgz
 Download to the dataset folder: `./data/nuscenes/`.
 
 #### 3. Attack the dataset for object detection
-In our paper, performed single-frame injection attack. You can also customize your own poisoned LiDAR dataset via other attack methods.
+In our paper, we assume historical scenes are not poisoned and performed single-frame injection attack. To do that, you can randomly pick some scenes from the **temporally attacked dataset** here: Link. Then replace corresponding benign LiDAR scenes in `./data/nuscenes/mini/sweeps/` . 
+If you want to replicate our results, please make sure only the current scene is poisoned and historical scenes(past 20 scenes) are benign. Alternatively, you can use poisoned dataset for **object detection** while use benign dataset for **motion prediction**. 
 
-Here is our customized dataset(Including LIDAR_TOP_attack_car, LIDAR_TOP_attack_ped and LIDAR_TOP_attack_cyl): 
+Also, you can customize your own poisoned LiDAR dataset via other types of attack methods.
 
 #### 4. Object detection
 Please feed your poisoned dataset to any kinds of 3D object detectors and get predictions.
 
 Our detection results after running OpenPCDet(https://github.com/open-mmlab/OpenPCDet.git) can be found in `./detection` folder.
 
-#### 5. Object-Motion prediction
-In our paper, we assume historical scenes are not poisoned. Therefore, to replicate our work, using benign LIDAR_TOP in `./data/nuscenes/` would work. 
-
-Our preliminary implementation of a 3D-TC2 prototype uses pretrained MotionNet(https://github.com/pxiangwu/MotionNet) to detect anomalies:
+#### 5. Motion prediction
+Our preliminary implementation of a 3D-TC2 prototype uses pretrained MotionNet to detect anomalies:
 ```
 python TC2.py --data ./data/nuscenes/mini/ --version v1.0-mini --modelpath model.pth --net MotionNet --savepath log
 ```
+
+If you find `model.pth` corrupted, please download one from MotionNet offical website: https://github.com/pxiangwu/MotionNet .
+
 #### 6. Further exploration
 These are some potential directions you might want to further explore:
--Other motion predictors. Other pretrained motion predictors such as FlowNet3D(https://github.com/xingyul/flownet3d), PointFlowNet(https://github.com/aseembehl/pointflownet) and HPLFlowNet(https://github.com/laoreja/HPLFlowNet) are also good targets.
 
 -Temporal attacks
-If you want to perform stress tests on the motion predictor, you can also poison historical scenes at the same time to perform consecutive/temporal attacks. To do that, we also prepared temporally attacked dataset(Including LIDAR_TOP_attack_car, LIDAR_TOP_attack_ped and LIDAR_TOP_attack_cyl) here: Link
+If you want to perform stress tests on the motion predictor, you can also poison historical scenes at the same time to perform consecutive/temporal attacks. To do that, you can select more scenes from  the **temporally attacked dataset** to ensure historical scenes are poisoned to influence motion predictions for the current scene. 
 
+-Other motion predictors. Other pretrained motion predictors such as FlowNet3D(https://github.com/xingyul/flownet3d), PointFlowNet(https://github.com/aseembehl/pointflownet) and HPLFlowNet(https://github.com/laoreja/HPLFlowNet) are also good targets.
 
 
 ## Reference
