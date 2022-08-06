@@ -546,18 +546,24 @@ class PointCloud(ABC):
         current_sd_rec = ref_sd_rec
 
         for k in range(nsweeps_back):
-            # attack pcs
+            # Prepare PCs for MotionNet
             if future_is_key_frame and k < 20:
                 csd_path = current_sd_rec['filename'].split('/')
                 print('former filename:',current_sd_rec['filename'])
-                # csd_path[1] = 'LIDAR_TOP_benign'
                 csd_path[0] = 'pcs'
-                if id_ref ==0:
-                    csd_path[1] = 'LIDAR_TOP_attack_car'
-                if id_ref ==1:
-                    csd_path[1] = 'LIDAR_TOP_attack_ped'
-                if id_ref ==2:
-                    csd_path[1] = 'LIDAR_TOP_attack_cyl'
+
+                # use benign LIDAR data for MotionNet
+                # In our paper, we assume historical scenes are not poisoned(benign) and performed single-frame injection attacks.
+                csd_path[1] = 'LIDAR_TOP_benign'
+
+                # You can also customize your own poisoned LiDAR dataset via other attack methods
+                # (e.g., consecutive attacks) to perform stress tests on 3D-TC2.
+                # if id_ref ==0:
+                #     csd_path[1] = 'LIDAR_TOP_attack_car'
+                # if id_ref ==1:
+                #     csd_path[1] = 'LIDAR_TOP_attack_ped'
+                # if id_ref ==2:
+                #     csd_path[1] = 'LIDAR_TOP_attack_cyl'
                 current_sd_rec['filename'] = os.path.join(*csd_path)
                 print('current filename:',current_sd_rec['filename'])
 
