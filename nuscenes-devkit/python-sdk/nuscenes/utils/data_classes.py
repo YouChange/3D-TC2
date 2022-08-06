@@ -556,8 +556,8 @@ class PointCloud(ABC):
                 # In our paper, we assume historical scenes are not poisoned(benign) and performed single-frame injection attacks.
                 csd_path[1] = 'LIDAR_TOP_benign'
 
-                # You can also customize your own poisoned LiDAR dataset via other attack methods
-                # (e.g., consecutive attacks) to perform stress tests on 3D-TC2.
+                # You can also customize your own poisoned LiDAR dataset via other attack methods(e.g., consecutive attacks) to perform stress tests on 3D-TC2.
+                
                 # if id_ref ==0:
                 #     csd_path[1] = 'LIDAR_TOP_attack_car'
                 # if id_ref ==1:
