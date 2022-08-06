@@ -34,7 +34,7 @@ Download to the dataset folder: `./data/nuscenes/`.
 #### 3. Attack the dataset
 Attack LiDAR scenes in `./data/nuscenes/mini/sweeps/` and customize your own poisoned LiDAR dataset via different data poisoning attack methods.
 
-In our paper, we performed single-frame injection attack and assume historical scenes are not poisoned. To do that, you can randomly pick some scenes from the **temporally attacked dataset** here: Link. Then replace corresponding benign LiDAR scenes in `./data/nuscenes/mini/sweeps/` . 
+In our paper, we performed **single-frame injection attack** and assume historical scenes are not poisoned. To do that, you can randomly pick some scenes from the **temporally attacked dataset** here: Link. Then replace corresponding benign LiDAR scenes in `./data/nuscenes/mini/sweeps/` . 
 
 Note: If you want to replicate our results, please make sure only the scene at current timestamp is poisoned and relatively historical scenes(past 20 scenes) are benign.
 
