@@ -32,9 +32,9 @@ wget https://www.nuscenes.org/data/v1.0-mini.tgz
 Download to the dataset folder: `./data/nuscenes/`.
 
 #### 3. Attack the dataset for object detection
-In our paper, we assume historical scenes are not poisoned(benign) and performed single-frame injection attacks. 
+In our paper, we assume historical scenes are not poisoned(benign LIDAR_TOP) and performed single-frame injection attacks. 
 
-You can also customize your own poisoned LiDAR dataset via other attack methods(e.g., consecutive attacks) to perform stress tests on 3D-TC2.
+You can also customize your own poisoned LiDAR dataset via other attack methods(e.g., consecutive attacks) to perform stress tests on 3D-TC2. Here is our customized dataset(Including LIDAR_TOP_attack_car, LIDAR_TOP_attack_ped and LIDAR_TOP_attack_cyl) for stress tests: Link
 
 #### 4. Object detection
 Please feed your poisoned dataset to any kinds of 3D object detectors and get predictions.
