@@ -46,12 +46,13 @@ Please feed your poisoned dataset to any kind of 3D object detector and get pred
 Our detection results after running OpenPCDet(https://github.com/open-mmlab/OpenPCDet.git) can be found in `./detection` folder.
 
 #### 5. Motion prediction
+Download MotionNet pretrained model from here: 
 Our preliminary implementation of a 3D-TC2 prototype uses pretrained MotionNet to detect anomalies:
 ```
 python TC2.py --data ./data/nuscenes/mini/ --version v1.0-mini --modelpath model.pth --net MotionNet --savepath log
 ```
 
-Note: If you find `model.pth` corrupted, please download one from MotionNet official website: https://github.com/pxiangwu/MotionNet .
+For further details of MotionNet, please refer to the official website: https://github.com/pxiangwu/MotionNet .
 
 #### 6. Further exploration
 There are some potential directions you might want to further explore:
