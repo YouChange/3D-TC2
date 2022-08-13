@@ -7,6 +7,7 @@ Targeting object spoofing attacks, 3D-TC2 can provide more than 98% attack detec
 (Car) objects, and is able to achieve real-time detection at 41Hz.
 
 [Paper Link](https://dl.acm.org/doi/pdf/10.1145/3469261.3469406)
+
 [Presentation Link](https://youtube.com/watch?v=vkYfP7Cr-1I&feature=share)
 
 ## Requirements
@@ -29,21 +30,21 @@ wget https://www.nuscenes.org/data/v1.0-mini.tgz
 ```
 
 #### 3. Attack the dataset
--Attack LiDAR scenes in `./data/nuscenes/mini/sweeps/` and customize your own poisoned LiDAR dataset via any data injection attack methods.
+ -Attack LiDAR scenes in `./data/nuscenes/mini/sweeps/` and customize your own poisoned LiDAR dataset via any data injection attack methods.
 
--In our paper, we performed **single-frame injection attack** and assumed historical scenes are not poisoned. To do that, you can randomly pick some scenes from our **temporally attacked dataset** [here](https://drive.google.com/file/d/1R_VdxMoTULiSSARxmlmkhPIk0CsFTiwQ/view?usp=sharing). 
+ -In our paper, we performed **single-frame injection attack** and assumed historical scenes are not poisoned. To do that, you can randomly pick some scenes from our [Temporally Attacked Dataset](https://drive.google.com/file/d/1R_VdxMoTULiSSARxmlmkhPIk0CsFTiwQ/view?usp=sharing). 
 
--Then replace corresponding benign LiDAR scenes in `./data/nuscenes/mini/sweeps/` . 
+ -Then replace corresponding benign LiDAR scenes in `./data/nuscenes/mini/sweeps/` . 
 
--Note: If you want to replicate our results, please make sure only the scene at the current timestamp is poisoned and relatively historical scenes(past 20 scenes) are benign.
+ -Note: If you want to replicate our results, please make sure only the scene at the current timestamp is poisoned and relatively historical scenes(past 20 scenes) are benign.
 
 #### 4. Object detection
--Please feed your poisoned dataset to any kind of 3D object detector and get predictions.
+ -Please feed your poisoned dataset to any kind of 3D object detector and get predictions.
 
--Our detection results after running [OpenPCDet0(https://github.com/open-mmlab/OpenPCDet.git) can be found in `./detection` folder.
+ -Our detection results after running [OpenPCDet](https://github.com/open-mmlab/OpenPCDet.git) can be found in `./detection` folder.
 
 #### 5. Motion prediction
--Download MotionNet pretrained model [here](https://drive.google.com/file/d/1I8WGPuoYeVwUPSPiCrY45IZvdRP2i2Jz/view?usp=sharing). For further details, please refer to the official website of MotionNet(https://github.com/pxiangwu/MotionNet).
+-Download MotionNet pretrained model [here](https://drive.google.com/file/d/1I8WGPuoYeVwUPSPiCrY45IZvdRP2i2Jz/view?usp=sharing). For further details, please refer to the official website of [MotionNet](https://github.com/pxiangwu/MotionNet).
 
 -Our preliminary implementation of a 3D-TC2 prototype uses pretrained MotionNet to detect anomalies:
 ```
