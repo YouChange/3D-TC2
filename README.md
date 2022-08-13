@@ -11,10 +11,10 @@ Targeting object spoofing attacks, 3D-TC2 can provide more than 98% attack detec
 [Presentation Link](https://youtube.com/watch?v=vkYfP7Cr-1I&feature=share)
 
 ## Requirements
-- CUDA >= 9.0
-- Python 3
-- PyTorch >= 1.1
-- pyquaternion, Matplotlib, PIL, numpy, cv2, tqdm, scipy, scikit-image, scikit-learn, ipython and other relevant packages
+ - CUDA >= 9.0
+ - Python 3
+ - PyTorch >= 1.1
+ - pyquaternion, Matplotlib, PIL, numpy, cv2, tqdm, scipy, scikit-image, scikit-learn, ipython and other relevant packages
 
 ## Usage
 #### 1. Add path to the root folder. For example:
