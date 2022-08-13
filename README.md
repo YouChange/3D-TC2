@@ -6,7 +6,7 @@ This is the official implementation of 3D-TC2(Temporal Consistency Checks to Det
 Targeting object spoofing attacks, 3D-TC2 can provide more than 98% attack detection rate with a recall of 91% for detecting spoofed Vehicle
 (Car) objects, and is able to achieve real-time detection at 41Hz.
 
-[Paper Link](https://dl.acm.org/doi/pdf/10.1145/3469261.3469406)       [Presentation Link](https://youtube.com/watch?v=vkYfP7Cr-1I&feature=share)
+[[Paper Link](https://dl.acm.org/doi/pdf/10.1145/3469261.3469406)]       [[Presentation Link](https://youtube.com/watch?v=vkYfP7Cr-1I&feature=share)]
 
 ## Requirements
  - CUDA >= 9.0
