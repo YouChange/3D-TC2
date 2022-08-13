@@ -44,19 +44,20 @@ wget https://www.nuscenes.org/data/v1.0-mini.tgz
  - Our detection results after running [OpenPCDet](https://github.com/open-mmlab/OpenPCDet.git) can be found in `./detection` folder.
 
 #### 5. Motion prediction
- - Download MotionNet pretrained model [here](https://drive.google.com/file/d/1I8WGPuoYeVwUPSPiCrY45IZvdRP2i2Jz/view?usp=sharing). For further details, please refer to the official website of [MotionNet](https://github.com/pxiangwu/MotionNet).
+ - Download MotionNet pretrained model [here](https://drive.google.com/file/d/1I8WGPuoYeVwUPSPiCrY45IZvdRP2i2Jz/view?usp=sharing).
 
  - Our preliminary implementation of a 3D-TC2 prototype uses pretrained MotionNet to detect anomalies:
 ```
 python TC2.py --data ./data/nuscenes/mini/ --version v1.0-mini --modelpath model.pth --net MotionNet --savepath log
 ```
 
+ -  For further details, please refer to the official website of [MotionNet](https://github.com/pxiangwu/MotionNet).
 #### 6. Further exploration
 There are some potential directions you might want to further explore:
 
-- **Temporal attacks**. If you want to perform stress tests on the motion predictor, you can also poison historical scenes to perform consecutive/temporal attacks. To do that, you can select more scenes from the **temporally attacked dataset** to ensure historical scenes are poisoned to influence motion predictions for the current scene. 
+ - **Temporal attacks**. If you want to perform stress tests on the motion predictor, you can also poison historical scenes to perform consecutive/temporal attacks. To do that, you can select more scenes from the **temporally attacked dataset** to ensure historical scenes are poisoned to influence motion predictions for the current scene. 
 
-- **Other motion predictors**. Other motion predictors such as [FlowNet3D](https://github.com/xingyul/flownet3d), [PointFlowNet](https://github.com/aseembehl/pointflownet) and [HPLFlowNet](https://github.com/laoreja/HPLFlowNet) are also good replacements for MotionNet.
+ - **Other motion predictors**. Other motion predictors such as [FlowNet3D](https://github.com/xingyul/flownet3d), [PointFlowNet](https://github.com/aseembehl/pointflownet) and [HPLFlowNet](https://github.com/laoreja/HPLFlowNet) are also good replacements for MotionNet.
 
 
 ## Reference
