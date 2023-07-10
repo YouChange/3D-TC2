@@ -61,6 +61,7 @@ There are some potential directions you might want to further explore:
 
 
 ## Reference
+If you find this project useful in your research, please consider cite:
 ```
 @inproceedings{you2021temporal,
   title={Temporal Consistency Checks to Detect LiDAR Spoofing Attacks on Autonomous Vehicle Perception},
