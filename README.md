@@ -55,8 +55,6 @@ There are some potential directions you might want to further explore:
 
  - **Temporal attacks**. If you want to perform stress tests on the motion predictor, you can also poison historical scenes to perform consecutive/temporal attacks. To do that, you can select more scenes from our [Temporally Attacked Dataset](https://drive.google.com/file/d/1R_VdxMoTULiSSARxmlmkhPIk0CsFTiwQ/view?usp=sharing) to ensure historical scenes are poisoned to influence motion predictions for the current scene. 
  
- - **Detecting smaller adversaries**. Our prototype only focuses on 'Car' objects in the front-near region. It might also be interesting to target smaller objects such as 'Perdestrains' or 'Bicycles' in a broader region. 
-
  - **Other motion predictors**. Other motion predictors such as [FlowNet3D](https://github.com/xingyul/flownet3d), [PointFlowNet](https://github.com/aseembehl/pointflownet) and [HPLFlowNet](https://github.com/laoreja/HPLFlowNet) are also good replacements for MotionNet.
 
 
