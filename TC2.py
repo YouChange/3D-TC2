@@ -1,5 +1,5 @@
 # 3D-TC2 implementation based on MotionNet
-# Defense against poisoned data
+# Defense against object injection attacks
 
 import torch
 import torch.nn as nn
