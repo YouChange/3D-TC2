@@ -17,8 +17,8 @@ Targeting object spoofing attacks, 3D-TC2 can provide more than 98% attack detec
 ## Usage
 #### 1. Add path to the root folder. For example:
 ```
-export PYTHONPATH=/your/home/dir/MotionNet:$PYTHONPATH
-export PYTHONPATH=/your/home/dir/MotionNet/nuscenes-devkit/python-sdk:$PYTHONPATH
+export PYTHONPATH=/your/home/dir/3D-TC2:$PYTHONPATH
+export PYTHONPATH=/your/home/dir/3D-TC2/nuscenes-devkit/python-sdk:$PYTHONPATH
 ```
 
 #### 2. Dataset
