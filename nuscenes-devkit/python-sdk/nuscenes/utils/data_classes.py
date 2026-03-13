@@ -1,4 +1,5 @@
 # Adapted nuScenes dev-kit of MotionNet
+# Code written by Chengzeng You, 2022
 
 import os
 import os.path as osp
