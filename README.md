@@ -1,5 +1,5 @@
 # 3D-TC2
-This is the official implementation of 3D-TC2(Temporal Consistency Checks to Detect LiDAR Spoofing Attacks on Autonomous Vehicle Perception).
+This is the official implementation of 3D-TC2 (Temporal Consistency Checks to Detect LiDAR Spoofing Attacks on Autonomous Vehicle Perception).
 
 ![image](https://user-images.githubusercontent.com/16199843/182342087-c2c67ed6-6ef7-4144-ab9a-3e91aadce45d.png)
 
