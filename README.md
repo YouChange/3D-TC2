@@ -34,7 +34,7 @@ wget https://www.nuscenes.org/data/v1.0-mini.tgz
 
  - Then replace corresponding benign LiDAR scenes in `./data/nuscenes/mini/sweeps/` . 
 
- - Note: If you want to replicate our results, please make sure only the scene at the current timestamp is poisoned and relatively historical scenes(past 20 scenes) are benign.
+ - Note: If you want to replicate our results, please make sure only the scene at the current timestamp is poisoned and relatively historical scenes (past 20 scenes) are benign.
 
 #### 4. Object detection
  - Please feed your poisoned dataset to any kind of 3D object detector and get predictions.
