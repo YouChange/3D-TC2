@@ -50,13 +50,14 @@ python TC2.py --data ./data/nuscenes/mini/ --version v1.0-mini --modelpath model
 ```
 
  -  For further details of MotionNet, please refer to the official website [here](https://github.com/pxiangwu/MotionNet).
+<!--
 #### 6. Further exploration
 There are some potential directions you might want to further explore:
 
  - **Temporal attacks**. If you want to perform stress tests on the motion predictor, you can also poison historical scenes to perform consecutive/temporal attacks. To do that, you can select more scenes from our [Temporally Attacked Dataset](https://drive.google.com/file/d/1R_VdxMoTULiSSARxmlmkhPIk0CsFTiwQ/view?usp=sharing) to ensure historical scenes are poisoned to influence motion predictions for the current scene. 
  
  - **Other motion predictors**. Other motion predictors such as [FlowNet3D](https://github.com/xingyul/flownet3d), [PointFlowNet](https://github.com/aseembehl/pointflownet) and [HPLFlowNet](https://github.com/laoreja/HPLFlowNet) are also good replacements for MotionNet.
-
+-->
 
 ## Reference
 If you find this project useful in your research, please cite:
